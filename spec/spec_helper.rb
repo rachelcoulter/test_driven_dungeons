@@ -2,6 +2,7 @@ require "bundler/setup"
 require "test_driven_dungeons"
 require_relative '../lib/test_driven_dungeons/campaign'
 require_relative '../lib/test_driven_dungeons/player'
+require_relative '../lib/test_driven_dungeons/character'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
