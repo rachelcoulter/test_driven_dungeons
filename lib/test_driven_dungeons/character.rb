@@ -1,5 +1,5 @@
 class Character
-  attr_reader :name, :xp, :strength, :race, :dexterity
+  attr_reader :name, :xp, :strength, :race, :dexterity, :intelligence
 
   def initialize(name: nil, race: nil)
     @name = name
@@ -21,6 +21,12 @@ class Character
     validate_d20 dexterity
 
     @dexterity = dexterity
+  end
+
+  def intelligence=(intelligence)
+    validate_d20 intelligence
+
+    @intelligence = intelligence
   end
 
   def validate_d20(value)
