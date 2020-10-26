@@ -1,9 +1,10 @@
 class Character
-  attr_reader :name, :xp, :strength
+  attr_reader :name, :xp, :strength, :race
 
-  def initialize(name: nil)
+  def initialize(name: nil, race: nil)
     @name = name
     @xp = 0
+    @race = race
   end
 
   def gain_xp(points)
@@ -15,5 +16,4 @@ class Character
 
     @strength = strength
   end
-
 end

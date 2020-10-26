@@ -1,11 +1,12 @@
 RSpec.describe Character do
 
   before :each do
-    @character = Character.new(name: "BoBo the Fat")
+    @character = Character.new(name: "BoBo the Fat", race: :elf)
   end
 
-  it "has name" do
+  it "has initial values" do
     expect(@character.name).to eq("BoBo the Fat")
+    expect(@character.race).to eq(:elf)
   end
 
   it "gains experience" do
