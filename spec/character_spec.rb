@@ -41,4 +41,16 @@ RSpec.describe Character do
     expect { @character.dexterity = 0 }.to raise_error ArgumentError
     expect { @character.dexterity = 21 }.to raise_error ArgumentError
   end
+  it "has constitution" do
+      @character.constitution = 1
+      expect(@character.constitution).to eq(1)
+      @character.constitution = 20
+      expect(@character.constitution).to eq(20)
+  end
+
+    it "validates constitution values" do
+      expect { @character.constitution = 0 }.to raise_error ArgumentError
+      expect { @character.constitution = 21 }.to raise_error ArgumentError
+
+  end
 end
