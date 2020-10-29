@@ -24,6 +24,18 @@ RSpec.describe Character do
     expect(@character.hp).to eq(hp)
   end
 
+  it "has hp" do
+    hp = 20
+    @character.hp = hp
+    expect(@character.hp).to eq(hp)
+  end
+
+  it "has ac" do
+    ac = 15
+    @character.ac = ac
+    expect(@character.ac).to eq(ac)
+  end
+
   it "has strength" do
     @character.strength = 1
     expect(@character.strength).to eq(1)
