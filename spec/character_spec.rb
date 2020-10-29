@@ -18,7 +18,13 @@ RSpec.describe Character do
     expect(@character.xp).to eq(xp1 + xp2)
   end
 
-  it "has strength " do
+  it "has hp" do
+    hp = 20
+    @character.hp = hp
+    expect(@character.hp).to eq(hp)
+  end
+
+  it "has strength" do
     @character.strength = 1
     expect(@character.strength).to eq(1)
     @character.strength = 20
@@ -30,7 +36,7 @@ RSpec.describe Character do
     expect { @character.strength = 21 }.to raise_error ArgumentError
   end
 
-  it "has dexterity " do
+  it "has dexterity" do
     @character.dexterity = 1
     expect(@character.dexterity).to eq(1)
     @character.dexterity = 20
@@ -66,7 +72,7 @@ RSpec.describe Character do
     expect { @character.intelligence = 21 }.to raise_error ArgumentError
   end
 
-  it "has wisdom " do
+  it "has wisdom" do
     @character.wisdom = 1
     expect(@character.wisdom).to eq(1)
     @character.wisdom = 20

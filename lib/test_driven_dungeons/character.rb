@@ -1,6 +1,7 @@
 class Character
   attr_reader :name, :xp, :strength, :race, :dexterity, :constitution,
               :intelligence, :wisdom, :charisma
+  attr_accessor :hp
 
   def initialize(name: nil, race: nil)
     @name = name
