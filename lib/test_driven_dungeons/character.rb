@@ -1,7 +1,7 @@
 class Character
   attr_reader :name, :xp, :strength, :race, :dexterity, :constitution,
               :intelligence, :wisdom, :charisma
-  attr_accessor :hp
+  attr_accessor :hp, :ac
 
   def initialize(name: nil, race: nil)
     @name = name
