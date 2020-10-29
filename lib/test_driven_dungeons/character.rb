@@ -1,5 +1,6 @@
 class Character
-  attr_reader :name, :xp, :strength, :race, :dexterity, :intelligence
+  attr_reader :name, :xp, :strength, :race, :dexterity, :constitution,
+              :intelligence, :wisdom
 
   def initialize(name: nil, race: nil)
     @name = name
@@ -23,13 +24,26 @@ class Character
     @dexterity = dexterity
   end
 
+  def constitution=(constitution)
+    validate_d20 constitution
+
+
+    @constitution = constitution
+  end
+
   def intelligence=(intelligence)
     validate_d20 intelligence
 
     @intelligence = intelligence
   end
 
+  def wisdom=(wisdom)
+    validate_d20 wisdom
+
+    @wisdom = wisdom
+  end
+
   def validate_d20(value)
-    raise ArgumentError.new if value < 1 || value > 20
+    raise ArgumentError if value < 1 || value > 20
   end
 end
