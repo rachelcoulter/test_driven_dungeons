@@ -54,7 +54,7 @@ RSpec.describe Character do
     expect { @character.constitution = 21 }.to raise_error ArgumentError
   end
 
-  it "has intelligence " do
+  it "has intelligence" do
     @character.intelligence = 1
     expect(@character.intelligence).to eq(1)
     @character.intelligence = 20
@@ -76,5 +76,17 @@ RSpec.describe Character do
   it "validates wisdom values" do
     expect { @character.wisdom = 0 }.to raise_error ArgumentError
     expect { @character.wisdom = 21 }.to raise_error ArgumentError
+  end
+
+  it "has charisma" do
+    @character.charisma = 1
+    expect(@character.charisma).to eq(1)
+    @character.charisma = 20
+    expect(@character.charisma).to eq(20)
+  end
+
+  it "validates charisma values" do
+    expect { @character.charisma = 0 }.to raise_error ArgumentError
+    expect { @character.charisma = 21 }.to raise_error ArgumentError
   end
 end
