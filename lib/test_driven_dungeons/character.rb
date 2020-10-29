@@ -1,6 +1,6 @@
 class Character
   attr_reader :name, :xp, :strength, :race, :dexterity, :constitution,
-    :intelligence
+              :intelligence, :wisdom
 
   def initialize(name: nil, race: nil)
     @name = name
@@ -35,6 +35,12 @@ class Character
     validate_d20 intelligence
 
     @intelligence = intelligence
+  end
+
+  def wisdom=(wisdom)
+    validate_d20 wisdom
+
+    @wisdom = wisdom
   end
 
   def validate_d20(value)
